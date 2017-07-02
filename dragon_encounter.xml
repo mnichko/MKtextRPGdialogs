@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<story name="Example">
+    <about>
+        A (deadly) dragon encounter.
+    </about>
+    <dialog name="start" type="start">
+        <question>
+            You see a blue dragon on the right.
+        </question>
+        <answer id="1" link="left">
+            I go left.
+        </answer>
+        <answer id="2" link="dragon_saw_you">
+            I go right.
+        </answer>
+        <answer id="3" link="dragon_saw_you">
+            I do nothing.
+        </answer>
+    </dialog>
+    <dialog name="left">
+        <question>
+            The blue dragon is looking for you.
+        </question>
+        <answer id="1" link="deadly attack">
+            I fight him
+        </answer>
+        <answer id="2" link="unseen">
+            I go away.
+        </answer>
+    </dialog>
+    <dialog name="safe">
+        <question>
+            You are safe!
+        </question>
+        <answer id="1" link="tired">
+            Allright.
+        </answer>
+    </dialog>
+    <dialog name="tired">
+        <question>
+            You are getting tired.
+        </question>
+        <answer id="1" link="fresh" reward="20">
+            I take a rest.
+        </answer>
+        <answer id="2" link="exhausted">
+            I go on.
+        </answer>
+    </dialog>
+    <dialog name="exhausted">
+        <question>
+            You are very tired.
+        </question>
+        <answer id="1" link="fresh">
+            I take a rest.
+        </answer>
+        <answer id="2" link="exhausted_dead">
+            I go on.
+        </answer>
+    </dialog>
+    <dialog name="fresh" type="end">
+        <question>
+            Finally you walked into a town.
+        </question>
+    </dialog>
+    <dialog name="dragon_saw_you">
+        <question>
+            The blue dragon saw you.
+        </question>
+        <answer id="1" link="dragon_attacks">
+            I try to hide.
+        </answer>
+        <answer id="2" link="left">
+            I run away.
+        </answer>
+        <answer id="3" link="deadly_attack">
+            I do nothing.
+        </answer>
+        <answer id="4" link="deadly_attack">
+            I fight him.
+        </answer>
+    </dialog>
+    <dialog name="deadly_attack" type="end">
+        <question>
+            The attack was deadly.
+        </question>
+    </dialog>
+    <dialog name="exhausted_dead" type="end">
+        <question>
+            You have died of exhaustion.
+        </question>
+    </dialog>
+    <dialog name="dragon_attacks">
+        <question>
+            The blue dragon hit you with nails.
+        </question>
+        <answer id="1" link="unseen">
+            I do nothing.
+        </answer>
+        <answer id="2" type="deadly_attack">
+            I fight him.
+        </answer>
+        <answer id="3" type="deadly_attack">
+            I try to run away.
+        </answer>
+    </dialog>
+    <dialog name="unseen">
+        <question>
+            The dragon does not see you.
+        </question>
+        <answer id="1" link="deadly_attack">
+            I fight him.
+        </answer>
+        <answer id="2" link="safe" reward="100">
+            I go away.
+        </answer>
+    </dialog>
+</story>

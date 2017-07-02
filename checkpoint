@@ -1,0 +1,2 @@
+model_checkpoint_path: "rpgmodel"
+all_model_checkpoint_paths: "rpgmodel"

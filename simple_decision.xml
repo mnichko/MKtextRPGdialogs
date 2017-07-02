@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<story name="Simple Decision">
+    <about>
+        One question, multiple answers for the beginning.
+    </about>
+    <dialog name="start" type="start">
+        <question>
+            Aaa?
+        </question>
+        <answer id="1" link="end" reward="100">
+            Ok.
+        </answer>
+        <answer id="2" link="start">
+            No.
+        </answer>
+    </dialog>
+    <dialog name="end" type="end">
+        <!-- Ostatnie pytanie, bez odpowiedzi-->
+        <question>
+            Yyy.
+        </question>
+    </dialog>
+</story>
